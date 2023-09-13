@@ -8,4 +8,4 @@ The code snapshots are organized in multiple **branches** that corresponding wit
 
 For example
 
-![Click on the branch dropdown and then select the appropriate branch for the project you're looking for](./Select-branch.js)
+![Click on the branch dropdown and then select the appropriate branch for the project you're looking for](./Select-branch.png)
