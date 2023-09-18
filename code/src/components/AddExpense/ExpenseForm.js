@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './ExpenseForm.css';
-const ExpenseForm = ({onExpenseData}) => {
+const ExpenseForm = ({onExpenseData, onCancel}) => {
     const [title, updateTitle] = useState('');
     const [amount, updateAmount] = useState('');
     const [date, updateDate] = useState('');
@@ -50,7 +50,7 @@ const ExpenseForm = ({onExpenseData}) => {
         event.preventDefault();
         const expenseData = {
             title: title,
-            amount: amount,
+            amount: +amount,
             date: new Date(date)
         };
 
@@ -80,6 +80,7 @@ const ExpenseForm = ({onExpenseData}) => {
                     <input type="date" value={date} min="2019-01-01" max="2022-12-31" onChange={dateChangeHandler}/>
                 </div>
                 <div className="new-expense__actions">
+                    <button type="button" onClick={onCancel}>Cancel</button>
                     <button type="submit">Add Expense</button>
                 </div>
             </div>
