@@ -6,8 +6,8 @@ const ExpenseFilter = ({onFilterChange, selected}) => {
     return(
         <div className='expenses-filter'>
             <div className="expenses-filter__control">
-                <label htmlFor="">Filter by year</label>
-                <select value={selected} onChange={selectHandler}>
+                <label htmlFor="year">Filter by year</label>
+                <select id="year" value={selected} onChange={selectHandler}>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>

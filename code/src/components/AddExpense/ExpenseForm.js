@@ -68,16 +68,16 @@ const ExpenseForm = ({onExpenseData, onCancel}) => {
         <form action="" onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
-                    <label htmlFor="">Title</label>
-                    <input type="text" value={title} onChange={(event) => {inputChangeHandler('title', event)}}/>
+                    <label htmlFor="title">Title</label>
+                    <input id="title" type="text" value={title} onChange={(event) => {inputChangeHandler('title', event)}}/>
                 </div>
                 <div className="new-expense__control">
-                    <label htmlFor="">Amount</label>
-                    <input type="number" value={amount} min="0.01" step="0.01" onChange={amountChangeHandler}/>
+                    <label htmlFor="amount">Amount</label>
+                    <input id="amount" type="number" value={amount} min="0.01" step="0.01" onChange={amountChangeHandler}/>
                 </div>
                 <div className="new-expense__control">
-                    <label htmlFor="">Date</label>
-                    <input type="date" value={date} min="2019-01-01" max="2022-12-31" onChange={dateChangeHandler}/>
+                    <label htmlFor="date">Date</label>
+                    <input id="date" type="date" value={date} min="2019-01-01" max="2022-12-31" onChange={dateChangeHandler}/>
                 </div>
                 <div className="new-expense__actions">
                     <button type="button" onClick={onCancel}>Cancel</button>
