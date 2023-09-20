@@ -1,6 +1,16 @@
 import styles from './ResultTable.module.css';
 
-const ResultTable = ({ results }) => {
+const ResultTable = (props) => {
+    const formatNumber = Intl.NumberFormat(
+        'en-US',
+        {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        }
+    );
+
     return (
         <table className={styles.result}>
             <thead>
@@ -13,13 +23,22 @@ const ResultTable = ({ results }) => {
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>YEAR NUMBER</td>
-                <td>TOTAL SAVINGS END OF YEAR</td>
-                <td>INTEREST GAINED IN YEAR</td>
-                <td>TOTAL INTEREST GAINED</td>
-                <td>TOTAL INVESTED CAPITAL</td>
-            </tr>
+            {props.data.map((data)=>(
+                <tr key={data.year}>
+                    <td>{data.year}</td>
+                    <td>{formatNumber.format(data.savingsEndOfYear)}</td>
+                    <td>{formatNumber.format(data.yearlyInterest)}</td>
+                    <td>{ formatNumber.format(
+                        data.savingsEndOfYear -
+                                props.current -
+                        data.yearlyContribution * data.year
+                    )}</td>
+                    <td>{ formatNumber.format(
+                        props.current +
+                        data.yearlyContribution * data.year
+                    )}</td>
+                </tr>
+            ))}
             </tbody>
         </table>
     );
