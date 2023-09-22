@@ -1,8 +1,9 @@
 import style from './AddUser.module.css';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
-import ErrorModal from "../UI/ErrrorModal";
+import ErrorModal from "../UI/ErrorModal";
 import { useState } from 'react';
+import Wrapper from "../Wrapper/Wrapper";
 
 const InitialState = {
     name: '',
@@ -49,7 +50,7 @@ const AddUser = (props) => {
     }
 
     return(
-        <div>
+        <Wrapper>
             {error &&
                 <ErrorModal valueErr={error} onResetErr={resetError}/>
             }
@@ -66,7 +67,7 @@ const AddUser = (props) => {
                     <Button type="submit">Add User</Button>
                 </form>
             </Card>
-        </div>
+        </Wrapper>
     );
 }
 export default AddUser;
