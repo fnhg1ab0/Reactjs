@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import Card from '../UI/Card/Card';
 import classes from './Home.module.css';
+import Button from "../UI/Button/Button";
+import LoginContext from "../../store/LoginContext";
 
-const Home = (props) => {
-  return (
-    <Card className={classes.home}>
-      <h1>Welcome back!</h1>
-    </Card>
-  );
+const Home = () => {
+    const ctx = useContext(LoginContext);
+    return (
+        <Card className={classes.home}>
+            <h1>Welcome back!</h1>
+            <Button onClick={ctx.onLogout}>Logout</Button>
+        </Card>
+    );
 };
 
 export default Home;
