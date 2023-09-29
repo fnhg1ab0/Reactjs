@@ -5,7 +5,7 @@ import CartFooterModal from "./CartFooterModal";
 
 const Cart = (props) => {
     return (
-        <ModalCart>
+        <ModalCart onClose={props.onHide}>
             <ul className={styles['cart-items']}>
                 {[{id: 'c1', name: 'Sushi', amount: 2, price: 12.99}].map((item) => (
                     <CartItem
@@ -16,7 +16,7 @@ const Cart = (props) => {
                     />
                 ))}
             </ul>
-            <CartFooterModal/>
+            <CartFooterModal onClose={props.onHide}/>
         </ModalCart>
     );
 }
