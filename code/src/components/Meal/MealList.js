@@ -29,7 +29,7 @@ const INITIALIZE_MEALS = [
     },
 ];
 
-const MealList = props => {
+const MealList = () => {
     const list = INITIALIZE_MEALS.map(meal => (
         <MealItem
             key={meal.id}

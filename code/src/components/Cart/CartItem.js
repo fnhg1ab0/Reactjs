@@ -1,12 +1,14 @@
 import styles from './CartItem.module.css';
 
 const CartItem = (props) => {
+    // const price = `$${props.price.toFixed(2)}`;
+    const price = `$${props.price}`;
     return (
-        <li className={styles['cart-item']}>
+        <li className={styles['cart-item']} id={props.id}>
             <div>
                 <h2>{props.name}</h2>
                 <div className={styles.summary}>
-                    <span className={styles.price}>$20.99</span>
+                    <span className={styles.price}>{price}</span>
                     <span className={styles.amount}>x {props.amount}</span>
                 </div>
             </div>
