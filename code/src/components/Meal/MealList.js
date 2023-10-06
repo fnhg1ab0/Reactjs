@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 const MealList = () => {
     const [meals, setMeals] = useState([]);
 
+
     const {
         isLoading,
         error,
@@ -16,6 +17,7 @@ const MealList = () => {
     const getData = {
         url: 'https://react-http-api-efe38-default-rtdb.firebaseio.com/meals.json'
     }
+
 
     const applyData = (data) => {
         // add data form Object to MealList component
@@ -27,8 +29,6 @@ const MealList = () => {
             });
         }
         console.log(meals);
-        console.log(error);
-        console.log(isLoading);
 
         setMeals(meals);
     }
