@@ -20,7 +20,6 @@ const MealList = () => {
 
 
     const applyData = (data) => {
-        // add data form Object to MealList component
         const meals = [];
         for (const key in data) {
             meals.push({
@@ -51,24 +50,25 @@ const MealList = () => {
     let content = <p>Found no meals.</p>;
 
     if (list) {
-        content = list;
+        content =
+            <Card>
+                <ul>
+                    {list}
+                </ul>
+            </Card>;
     }
 
     if (error) {
-        content = <p>{error}</p>;
+        content = <p className={styles.ErrorMeals}>{error}</p>;
     }
 
     if (isLoading) {
-        content = <p>Loading...</p>;
+        content = <p className={styles.MealLoading}>Loading...</p>;
     }
 
     return (
         <section className={styles.meals}>
-            <Card>
-                <ul>
-                    {content}
-                </ul>
-            </Card>
+            {content}
         </section>
     );
 }

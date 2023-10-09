@@ -16,8 +16,17 @@ const CartFooterModal = (props) => {
 
     const submitOrderHandler = (event) => {
         event.preventDefault();
-        console.log('Ordering...');
+        props.onOrder();
     }
+
+    const btn = (
+        <div className={styles.actions}>
+            <button className={styles['button--alt']} onClick={props.onClose}>
+                Close
+            </button>
+            {existedItem && <button className={styles.button} onClick={submitOrderHandler}>Order</button>}
+        </div>
+    )
 
     return (
         <>
@@ -25,12 +34,7 @@ const CartFooterModal = (props) => {
                 <span>Total Amount</span>
                 <span>{total}</span>
             </div>
-            <div className={styles.actions}>
-                <button className={styles['button--alt']} onClick={props.onClose}>
-                    Close
-                </button>
-                {existedItem && <button className={styles.button} onClick={submitOrderHandler}>Order</button>}
-            </div>
+            {!props.onCheckout && btn}
         </>
     );
 }
