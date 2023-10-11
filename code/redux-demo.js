@@ -35,3 +35,6 @@ createStore.subscribe(counterSubscriber);
 createStore.dispatch({type: ''});
 createStore.dispatch({type: 'increment'});
 createStore.dispatch({type: 'decrement'});
+
+// run the file
+// node redux-demo.js
