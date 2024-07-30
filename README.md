@@ -23,3 +23,9 @@ To run code, navigate into a specific code snapshot folder via the `cd` command 
 Then run `npm install` to install all required dependencies (this will create a `/node_modules` folder).
 
 **Important:** If you're using the code for a module that requires API keys or a backend (e.g. the module about sending Http requests), you'll have to use **your backend URLs** or API keys.
+
+#Note
+
+##Optimize:
+Control component: ít dữ liệu, dùng vs state
+Uncontrol component: thường vs form nhiều dữ liệu, dùng thư viện: react hook form, formik, antd form
