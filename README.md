@@ -26,6 +26,8 @@ Then run `npm install` to install all required dependencies (this will create a 
 
 #Note
 
-##Optimize:
+## Optimize:
+
 Control component: ít dữ liệu, dùng vs state
+
 Uncontrol component: thường vs form nhiều dữ liệu, dùng thư viện: react hook form, formik, antd form
