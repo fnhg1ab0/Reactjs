@@ -31,3 +31,9 @@ Then run `npm install` to install all required dependencies (this will create a 
 Control component: ít dữ liệu, dùng vs state
 
 Uncontrol component: thường vs form nhiều dữ liệu, dùng thư viện: react hook form, formik, antd form
+
+### With nextjs:
+
+Add progress bar: có thể dùng next nprogress bar
+
+SSG: generate sẵn file html từ server để ko phải đợi load lâu
