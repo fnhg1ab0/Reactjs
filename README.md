@@ -37,3 +37,11 @@ Uncontrol component: thường vs form nhiều dữ liệu, dùng thư viện: r
 Add progress bar: có thể dùng next nprogress bar
 
 SSG: generate sẵn file html từ server để ko phải đợi load lâu
+
+Revalidate data + router.refresh: update data để hiển thị vs SSG
+
+Handle error: **error:** áp dụng cho các file page, **global-error:** áp dụng cho file layout, **not-found:** tương tự
+
+Middleware: thường dùng check req, res để chuyển hướng trang
+
+Loading
